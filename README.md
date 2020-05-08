@@ -14,6 +14,9 @@ and type
 
 in the repository directory.
 
+This package requires the following:
+- NumPy
+- Matplotlib
 
 ### Copyright
 
