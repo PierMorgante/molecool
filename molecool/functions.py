@@ -31,17 +31,6 @@ def open_pdb(f_loc):
     coords = np.array(c)
     return sym, coords
 
-atomic_weights = {
-    'H': 1.00784,
-    'C': 12.0107,
-    'N': 14.0067,
-    'O': 15.999,
-    'P': 30.973762,
-    'F': 18.998403,
-    'Cl': 35.453,
-    'Br': 79.904,
-}
-
 def open_xyz(file_location):
 
     # Open an xyz file and return symbols and coordinates.
