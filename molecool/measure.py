@@ -10,7 +10,7 @@ def calculate_distance(rA, rB):
 
     Parameters
     ----------
-    rA, rB : np.ndarray
+    rA, rB : np.nparray
     	The coordinates of each point.
 
     Returns
@@ -20,15 +20,15 @@ def calculate_distance(rA, rB):
 
     Examples
     --------
-    >>> r1 - np.arrau([0.0, 0.0, 0.0])
-    >>> r2 - np.arrau([0.0, 0.0, 1.0])
+    >>> r1 - np.array([0.0, 0.0, 0.0])
+    >>> r2 - np.array([0.0, 0.0, 1.0])
     >>> calculate_distance(r1,r2)
     1.0 
     """
 
     # This function calculates the distance between two points given as numpy arrays.
     # This checks for the type
-    if isinstance(rA, np.ndarray) is False or isinstance(rB, ndarray) is False:
+    if isinstance(rA, np.array) is False or isinstance(rB, np.array) is False:
         raise TypeError("rA and rB must be numpy arrays")
     d=(rA-rB)
     dist=np.linalg.norm(d)
