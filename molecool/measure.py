@@ -5,9 +5,35 @@ This module is for functions which perform measurements.
 import numpy as np
 
 def calculate_distance(rA, rB):
+    """
+    Calculate the distance between two points.
+
+    Parameters
+    ----------
+    rA, rB : np.ndarray
+    	The coordinates of each point.
+
+    Returns
+    -------
+    distance : float
+    	The distance between the two points.
+
+    Examples
+    --------
+    >>> r1 - np.arrau([0.0, 0.0, 0.0])
+    >>> r2 - np.arrau([0.0, 0.0, 1.0])
+    >>> calculate_distance(r1,r2)
+    1.0 
+    """
+
     # This function calculates the distance between two points given as numpy arrays.
+    # This checks for the type
+    if isinstance(rA, np.ndarray) is False or isinstance(rB, ndarray) is False:
+        raise TypeError("rA and rB must be numpy arrays")
     d=(rA-rB)
     dist=np.linalg.norm(d)
+    if dist == 0.0:
+        raise Exception("Two atoms are located in the same point.")
     return dist
 
 def calculate_angle(rA, rB, rC, degrees=False):
@@ -21,4 +47,3 @@ def calculate_angle(rA, rB, rC, degrees=False):
         return np.degrees(theta)
     else:
         return theta
-
