@@ -23,15 +23,16 @@ def calculate_distance(rA, rB):
     >>> r1 - np.array([0.0, 0.0, 0.0])
     >>> r2 - np.array([0.0, 0.0, 1.0])
     >>> calculate_distance(r1,r2)
-    1.0 
+    1.0
     """
 
     # This function calculates the distance between two points given as numpy arrays.
     # This checks for the type
-    if isinstance(rA, np.array) is False or isinstance(rB, np.array) is False:
-        raise TypeError("rA and rB must be numpy arrays")
-    d=(rA-rB)
-    dist=np.linalg.norm(d)
+    if not isinstance(rA, np.ndarray) or not isinstance(rB, np.ndarray):
+        raise TypeError("Input must be type np.ndarray for calculate_distance!")
+    distance_vector = (rA - rB)
+    distance = np.linalg.norm(distance_vector)
+    return distance
     if dist == 0.0:
         raise Exception("Two atoms are located in the same point.")
     return dist
