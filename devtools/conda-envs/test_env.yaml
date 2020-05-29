@@ -4,6 +4,8 @@ dependencies:
     # Base depends
   - python
   - pip
+  - numpy
+  - matplotlib
 
     # Testing
   - pytest
@@ -13,4 +15,3 @@ dependencies:
     # Pip-only installs
   #- pip:
   #  - codecov
-
